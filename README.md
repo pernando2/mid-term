@@ -66,7 +66,7 @@ Comments Collection
 | `none`    | `none`   | `none`                     |
 ### Response
 content
-```http
+```bash
   [
     {
         <videos object>
@@ -74,7 +74,7 @@ content
   ]
 ```
 ### Request POST videos
-```http
+```bash
   POST /api/postvideo
 ```
 | Parameter  | Body      | Description                |
@@ -91,7 +91,7 @@ content
 
 ## Products
 ### Request GET Product
-```http
+```bash
   GET /api/getproduct/(VideoID)
 ```
 | Parameter | Type     | Description                |
@@ -99,7 +99,7 @@ content
 | `argument`    | `number`   | `videoID yang dimiliki oleh document products untuk mencari data products`                     |
 ### Response
 content
-```http
+```bash
   [
     {
         - ProductId
@@ -110,7 +110,7 @@ content
   ]
 ```
 ### Request POST Products
-```http
+```bash
   POST /api/postproduct/(videoID)
 ```
 | Parameter  | params      | Description                |
@@ -124,7 +124,7 @@ content
 
 ### Response when success
 content
-```http
+```bash
 {
     "message": "Product berhasil ditambahkan.",
     "data": {<products.object>}
@@ -133,7 +133,7 @@ content
 
 ## Comments
 ### Request GET Comments
-```http
+```bash
   METHOD GET /api/getcomment/(VideoID)
 ```
 | Parameter | Type     | Description                |
@@ -141,7 +141,7 @@ content
 | `argument`    | `number`   | `videoID yang dimiliki oleh document comments untuk mencari data comments`                     |
 ### Response when success
 content
-```http
+```bash
   [
     {
         - Username
@@ -152,20 +152,20 @@ content
 ```
 ### Response when failed
 content
-```http
+```bash
 "error": "Comment tidak ditemukan."
 ```
 or 
 
 content
-```http
+```bash
 "error": "Gagal Mendapatkan comment dari vidoe"
 ```
 
 
 
 ### Request POST Comments
-```http
+```bash
   METHOD POST /api/postcomment/(videoID)
 ```
 | Parameter  | params      | Description                |
@@ -179,12 +179,12 @@ content
 
 ### Response when success
 content
-```http
+```bash
 "Success"
 ```
 
 ### Response when failed
 content
-```http
+```bash
 "Fail"
 ```
