@@ -58,7 +58,7 @@ Comments Collection
 # API Request and Response
 ## Videos
 ### Request GET all videos
-```http
+```bash
   GET /api/getAllVideo
 ```
 | Parameter | Type     | Description                |
@@ -82,7 +82,7 @@ content
 | `Body`     | {title,thumbnailUrl}    | `argumen untuk videos` |                    |
 ### Response
 content
-```http
+```bash
 {
     "message": "Video berhasil ditambahkan.",
     "data": {<videos.object>}
