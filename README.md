@@ -82,7 +82,7 @@ content
 | `Body`     | {title,thumbnailUrl}    | `argumen untuk videos` |                    |
 ### Response
 content
-```bash
+```
 {
     "message": "Video berhasil ditambahkan.",
     "data": {<videos.object>}
@@ -97,7 +97,7 @@ content
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `argument`    | `number`   | `videoID yang dimiliki oleh document products untuk mencari data products`                     |
-### Response
+### Response when success
 content
 ```bash
   [
@@ -109,6 +109,19 @@ content
     }
   ]
 ```
+
+### Response when failed
+content
+```bash
+"error": "Product tidak ditemukan."
+```
+or 
+
+content
+```bash
+"error": "Gagal mendapatkan Product dari Video."
+```
+
 ### Request POST Products
 ```bash
   POST /api/postproduct/(videoID)
@@ -159,7 +172,7 @@ or
 
 content
 ```bash
-"error": "Gagal Mendapatkan comment dari vidoe"
+"error": "Gagal Mendapatkan comment dari video"
 ```
 
 
