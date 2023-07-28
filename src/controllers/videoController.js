@@ -1,13 +1,13 @@
 const Video = require("../model/video")
 
 function postVideo(req, res) {
-    // const { thumbnailUrl} = req.body
     const video = new Video({
+        title: req.body.title,
         thumbnailUrl: req.body.thumbnailUrl,
     })
     try {
-        const videoToSave = video.save();
-        res.status(200).json({ message: 'Video berhasil ditambahkan.', data: videoToSave})
+        video.save();
+        res.status(200).json({ message: 'Video berhasil ditambahkan.', data: video})
     }
     catch (error) {
         res.status(400).json({message: error.message})

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
-    videoID: {type: Number, ref: 'Videos', default:0},
+    VideoID: {type: Number, ref: 'Videos', default:0},
     Title: {
         required: true,
         type: String

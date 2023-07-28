@@ -10,9 +10,9 @@ router.post('/postVideo', videoController.postVideo)
 
 // Product
 router.get('/getProduct/:id', productController.getProductFromVideoId)
-router.post('/postProduct', productController.postProduct)
+router.post('/postProduct/:id', productController.postProduct)
 
 // Comment
 router.get('/getComment/:id', commentController.getCommentFromVideoId)
-router.post('/postComment', commentController.postComment)
+router.post('/postComment/:id', commentController.postComment)
 module.exports = router;

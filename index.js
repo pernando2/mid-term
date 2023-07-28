@@ -15,7 +15,7 @@ database.once('connected', () => {
     console.log("Database Connected");
 })
 
-const routes = require('./src/routes/route')
+const routes = require('./src/routes/routes')
 app.use(express.json());
 
 app.use(bodyParser.json())
@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({
 }),
 )
 
-app.use('/play', routes)
+app.use('/api', routes)
 
 app.listen(3000, () => {
     console.log(`Server started at http://localhost:${3000}/`)

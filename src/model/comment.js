@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const commentSchema = new mongoose.Schema({
-    videoID: {type: Number, ref: 'Videos', default:0},
+    VideoID: {type: Number, ref: 'Videos', default:0},
     Username: {
         required: true,
         type: String,
